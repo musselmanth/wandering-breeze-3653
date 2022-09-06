@@ -3,3 +3,4 @@
 <p>Challenge Theme: <%= @project.challenge_theme %></p>
 <p>Number of Contestants: <%= @project.contestant_count %></p>
 <p>Average Contestant Experience: <%= @project.average_contestant_experience %></p>
+<%= button_to "Add Contestant", "/projects/#{@project.id}/contestants/new", method: :get %>

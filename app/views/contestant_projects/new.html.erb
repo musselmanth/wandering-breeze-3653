@@ -1,0 +1,6 @@
+<h1>Add Contestant</h1>
+<%= form_with url: "/projects/#{params[:project_id]}/contestants", method: :post, local: true do |f| %>
+  <%= f.label :contestant_id, "Contestant ID: ", value: @contestant_project.contestant_id %>
+  <%= f.text_field :contestant_id %>
+  <%= f.submit "Submit" %>
+<% end %>

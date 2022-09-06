@@ -29,4 +29,14 @@ RSpec.describe 'Project Show Page', type: :feature do
     
     expect(page).to have_content("Average Contestant Experience: 12.5")
   end
+
+  it 'has a button to add a contestant' do
+    visit("/projects/#{@news_chic.id}")
+    
+    expect(page).to have_button("Add Contestant")
+
+    click_button("Add Contestant")
+
+    expect(current_path).to eq("/projects/#{@news_chic.id}/contestants/new")
+  end
 end
