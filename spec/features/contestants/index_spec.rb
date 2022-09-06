@@ -13,10 +13,10 @@ RSpec.describe 'Contestants Index Page', type: :feature do
   end
 
   it 'lists each contestant and each project theyve been on' do
-    visit("/constestants")
+    visit("/contestants")
     expect(page).to have_content(@jay.name)
     expect(page).to have_content(@gretchen.name)
-    within("p##{jay.id}") do
+    within("p##{@jay.id}") do
       expect(page).to have_content("Projects: News Chic, Boardfit")
     end
     within("p##{@gretchen.id}") do
