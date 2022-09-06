@@ -45,6 +45,11 @@ RSpec.describe Project, type: :model do
         expect(@boardfit.contestant_count).to eq(2)
         expect(@news_chic.contestant_count).to eq(2)
       end
+
+      it 'returns average contestant experience' do
+        expect(@news_chic.average_contestant_experience).to eq(12.5)
+        expect(@boardfit.average_contestant_experience).to eq(11.5)
+      end
     end
   end
 end
